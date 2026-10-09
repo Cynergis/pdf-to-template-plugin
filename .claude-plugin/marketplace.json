@@ -1,0 +1,13 @@
+{
+  "name": "local-report-tools",
+  "owner": {
+    "name": "chihebdkhil"
+  },
+  "plugins": [
+    {
+      "name": "pdf-to-template",
+      "source": "./",
+      "description": "Define report types with a report analyst, ask questions about the report catalogue, and turn a sample PDF into a data-driven template."
+    }
+  ]
+}

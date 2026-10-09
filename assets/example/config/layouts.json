@@ -1,0 +1,15 @@
+{
+  "_comment": "6 base layouts = arrangements of the same components. Series variants (A/F/LB/PW/ETF) change data + a few slots, not the layout file.",
+  "balanced": {"columns": [
+    ["returns", "regional", "sector", "credit", "managers"],
+    ["calendar", "growth", "holdings", "risk_measures"],
+    ["key_data", "why", "risk_tolerance"]]},
+  "equity": {"columns": [
+    ["returns", "regional", "sector", "managers"],
+    ["calendar", "growth", "holdings", "risk_measures"],
+    ["key_data", "why", "risk_tolerance"]]},
+  "fixed_income": {"columns": [
+    ["returns", "regional", "credit", "managers"],
+    ["calendar", "growth", "holdings", "risk_measures"],
+    ["key_data", "why", "risk_tolerance"]]}
+}

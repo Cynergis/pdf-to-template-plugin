@@ -1,0 +1,5 @@
+{
+  "name": "pdf-to-template",
+  "version": "0.2.0",
+  "description": "Define report types with a report analyst, ask questions about the report catalogue, and turn a sample PDF into a data-driven template. Reads the report ontology; holds no copy of it."
+}

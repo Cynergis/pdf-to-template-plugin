@@ -1,0 +1,12 @@
+{
+ "calendar": {
+  "y_min": -15,
+  "y_max": 20,
+  "tick": 5,
+  "label_rotate": true,
+  "value_decimals": 1
+ },
+ "growth": {
+  "tick_step": 5000
+ }
+}

@@ -1,0 +1,5 @@
+pymupdf
+jinja2
+playwright
+opencv-python-headless
+scikit-image

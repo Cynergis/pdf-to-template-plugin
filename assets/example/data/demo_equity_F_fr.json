@@ -1,0 +1,463 @@
+{
+ "name": "Fonds Démo Actions canadiennes de croissance",
+ "series": "F",
+ "category": "equity",
+ "layout": "equity",
+ "returns": {
+  "asof": "06/30/2026",
+  "rows": [
+   [
+    "1 mois",
+    1.2
+   ],
+   [
+    "3 mois",
+    5.1
+   ],
+   [
+    "Depuis le début de l'année",
+    4.4
+   ],
+   [
+    "1 an",
+    11.8
+   ],
+   [
+    "3 ans",
+    9.2
+   ],
+   [
+    "5 ans",
+    8.7
+   ],
+   [
+    "Depuis la création (mars 2014)",
+    7.9
+   ]
+  ]
+ },
+ "regional": {
+  "asof": "05/31/2026",
+  "groups": [
+   {
+    "name": "Trésorerie",
+    "value": null,
+    "rows": [
+     [
+      "Trésorerie et équivalents",
+      2.4
+     ]
+    ]
+   },
+   {
+    "name": "Actions",
+    "value": null,
+    "rows": [
+     [
+      "Canada",
+      88.1
+     ],
+     [
+      "États-Unis",
+      7.3
+     ],
+     [
+      "Royaume-Uni",
+      1.4
+     ],
+     [
+      "Autres",
+      0.8
+     ]
+    ]
+   }
+  ]
+ },
+ "sector": {
+  "asof": "05/31/2026",
+  "rows": [
+   [
+    "Services financiers",
+    31.2
+   ],
+   [
+    "Énergie",
+    17.5
+   ],
+   [
+    "Industrie",
+    13.9
+   ],
+   [
+    "Matériaux",
+    11.0
+   ],
+   [
+    "Technologie",
+    9.4
+   ],
+   [
+    "Consommation discr.",
+    5.6
+   ],
+   [
+    "Services publics",
+    4.1
+   ],
+   [
+    "Télécommunications",
+    3.3
+   ],
+   [
+    "Trésorerie",
+    2.4
+   ],
+   [
+    "Autres",
+    1.6
+   ]
+  ]
+ },
+ "credit": null,
+ "managers": [
+  {
+   "team": "Équipe Démo Actions",
+   "people": [
+    "Gestionnaire Un",
+    "Gestionnaire Deux"
+   ]
+  }
+ ],
+ "calendar": {
+  "asof": "06/30/2026",
+  "series": [
+   [
+    "'16",
+    18.2
+   ],
+   [
+    "'17",
+    7.4
+   ],
+   [
+    "'18",
+    -9.8
+   ],
+   [
+    "'19",
+    20.1
+   ],
+   [
+    "'20",
+    4.3
+   ],
+   [
+    "'21",
+    24.6
+   ],
+   [
+    "'22",
+    -6.2
+   ],
+   [
+    "'23",
+    10.9
+   ],
+   [
+    "'24",
+    17.7
+   ],
+   [
+    "'25",
+    14.0
+   ],
+   [
+    "YTD",
+    4.4
+   ]
+  ]
+ },
+ "growth": {
+  "asof": "06/30/2026",
+  "points": [
+   10000,
+   9881,
+   10072,
+   10379,
+   10633,
+   10770,
+   10861,
+   10955,
+   11153,
+   11169,
+   11297,
+   11500,
+   11561,
+   11819,
+   12030,
+   12640,
+   12798,
+   12746,
+   12708,
+   12772,
+   13103,
+   13075,
+   13256,
+   13875,
+   13184,
+   12931,
+   13069,
+   13253,
+   13394,
+   13337,
+   13602,
+   13759,
+   13674,
+   14501,
+   14692,
+   14590,
+   14636,
+   14640,
+   14697,
+   13915,
+   13840,
+   14225,
+   13938,
+   13991,
+   14363,
+   14713,
+   15283,
+   14800,
+   14763,
+   14731,
+   15013,
+   15459,
+   14651,
+   15085,
+   14690,
+   14991,
+   14584,
+   14718,
+   15189,
+   15220,
+   15364,
+   15719,
+   15851,
+   15904,
+   16536,
+   17011,
+   16990,
+   18142,
+   17784,
+   18241,
+   18231,
+   18381,
+   18767,
+   18958,
+   19328,
+   18789,
+   18272,
+   18618,
+   18325,
+   18011,
+   17530,
+   18120,
+   18517,
+   19228,
+   18935,
+   19036,
+   18663,
+   19080,
+   19863,
+   19581,
+   20371,
+   20928,
+   20957,
+   20174,
+   20918,
+   20984,
+   20817,
+   21112,
+   21416,
+   22249,
+   21871,
+   22543,
+   23415,
+   24302,
+   24334,
+   24066,
+   24740,
+   24934,
+   25135,
+   26071,
+   26057,
+   24906,
+   24825,
+   23960,
+   24524,
+   24826,
+   24625,
+   24750,
+   25340,
+   25518,
+   26412
+  ],
+  "end_label": "$26,412",
+  "x_labels": [
+   "janv.-18",
+   "janv.-20",
+   "janv.-22",
+   "janv.-24",
+   "janv.-26"
+  ],
+  "y_ticks": [
+   5000,
+   10000,
+   15000,
+   20000
+  ]
+ },
+ "holdings": {
+  "asof": "05/31/2026",
+  "top_pct": 38.6,
+  "groups": [
+   {
+    "name": "Actions",
+    "rows": [
+     [
+      "Banque Royale du Canada",
+      6.2
+     ],
+     [
+      "Banque Toronto-Dominion",
+      5.1
+     ],
+     [
+      "Enbridge Inc.",
+      4.4
+     ],
+     [
+      "Canadian Natural Resources",
+      4.0
+     ],
+     [
+      "Shopify Inc.",
+      3.8
+     ],
+     [
+      "Brookfield Corp.",
+      3.6
+     ],
+     [
+      "Banque de Montréal",
+      3.2
+     ],
+     [
+      "Constellation Software",
+      3.0
+     ],
+     [
+      "Agnico Eagle Mines",
+      2.8
+     ],
+     [
+      "Waste Connections",
+      2.5
+     ]
+    ]
+   }
+  ],
+  "totals": [
+   [
+    "NOMBRE TOTAL DE TITRES",
+    "62"
+   ]
+  ]
+ },
+ "risk_measures": {
+  "asof": "06/30/2026",
+  "rows": [
+   [
+    "Écart-type annuel",
+    "12.41"
+   ],
+   [
+    "Bêta",
+    "0.96"
+   ],
+   [
+    "Écart-type ann. de l'indice",
+    "12.18"
+   ],
+   [
+    "R au carré",
+    "0.93"
+   ],
+   [
+    "Alpha",
+    "1.12"
+   ],
+   [
+    "Ratio de Sharpe",
+    "0.58"
+   ]
+  ]
+ },
+ "key_data": {
+  "kv": [
+   [
+    "Actif total du fonds :",
+    "1,4 milliard $"
+   ],
+   [
+    "VLPP (30/06/2026) :",
+    "22,87 $ CA"
+   ],
+   [
+    "RFG (mars 2026) :",
+    "F : 0,86 %"
+   ],
+   [
+    "Frais de gestion :",
+    "F : 0,65 %"
+   ]
+  ],
+  "benchmark": "Indice composé S&P/TSX",
+  "distributions": [
+   [
+    "F",
+    "Annuelle",
+    "0,4120",
+    "23/12/2025"
+   ]
+  ],
+  "code_cols": [
+   "Série ($ CA)",
+   "Préfixe",
+   "FA",
+   ""
+  ],
+  "codes": [
+   [
+    "F",
+    "DEM",
+    "101",
+    ""
+   ],
+   [
+    "PW",
+    "DEM",
+    "202",
+    ""
+   ]
+  ]
+ },
+ "why": [
+  "Vise une croissance du capital à long terme au moyen d'actions canadiennes de grande qualité.",
+  "Portefeuille concentré d'environ 60 titres choisis selon une analyse fondamentale ascendante."
+ ],
+ "risk_level": 2,
+ "disclaimers": [
+  "Données fictives à des fins de démonstration du gabarit. Les rendements passés ne sont pas garants des rendements futurs."
+ ]
+}

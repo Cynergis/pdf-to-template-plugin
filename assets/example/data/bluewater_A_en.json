@@ -1,0 +1,614 @@
+{
+ "name": "Mackenzie Bluewater Canadian Growth Balanced Fund",
+ "series": "A",
+ "category": "balanced",
+ "layout": "balanced",
+ "returns": {
+  "asof": "06/30/2026",
+  "rows": [
+   [
+    "1 Month",
+    0.4
+   ],
+   [
+    "3 Months",
+    3.9
+   ],
+   [
+    "Year-to-date",
+    -0.9
+   ],
+   [
+    "1 Year",
+    -1.5
+   ],
+   [
+    "2 Years",
+    3.8
+   ],
+   [
+    "3 Years",
+    4.5
+   ],
+   [
+    "5 Years",
+    3.0
+   ],
+   [
+    "10 Years",
+    6.0
+   ],
+   [
+    "Since inception (Nov. 1996)",
+    6.4
+   ]
+  ]
+ },
+ "regional": {
+  "asof": "05/31/2026",
+  "groups": [
+   {
+    "name": "Cash & Equivalents",
+    "value": null,
+    "rows": [
+     [
+      "Cash & Equivalents",
+      0.9
+     ]
+    ]
+   },
+   {
+    "name": "Equities",
+    "value": null,
+    "rows": [
+     [
+      "Canada",
+      37.8
+     ],
+     [
+      "United States",
+      23.9
+     ],
+     [
+      "Ireland",
+      1.2
+     ],
+     [
+      "Netherlands",
+      1.1
+     ],
+     [
+      "Other",
+      1.4
+     ]
+    ]
+   },
+   {
+    "name": "Fixed Income",
+    "value": null,
+    "rows": [
+     [
+      "Canada",
+      18.4
+     ],
+     [
+      "United States",
+      13.3
+     ],
+     [
+      "United Kingdom",
+      0.5
+     ],
+     [
+      "Norway",
+      0.4
+     ],
+     [
+      "Other",
+      1.1
+     ]
+    ]
+   }
+  ]
+ },
+ "sector": {
+  "asof": "05/31/2026",
+  "rows": [
+   [
+    "Fixed Income",
+    33.6
+   ],
+   [
+    "Financials",
+    16.9
+   ],
+   [
+    "Information Technology",
+    13.1
+   ],
+   [
+    "Industrials",
+    9.8
+   ],
+   [
+    "Materials",
+    7.2
+   ],
+   [
+    "Energy",
+    5.2
+   ],
+   [
+    "Health Care",
+    3.3
+   ],
+   [
+    "Communication Serv.",
+    3.2
+   ],
+   [
+    "Consumer Staples",
+    3.0
+   ],
+   [
+    "Consumer Discretionary",
+    2.9
+   ],
+   [
+    "Cash & Equivalents",
+    0.9
+   ],
+   [
+    "Other",
+    0.9
+   ]
+  ]
+ },
+ "credit": {
+  "asof": "05/29/2026",
+  "rows": [
+   [
+    "AAA",
+    3.4
+   ],
+   [
+    "AA",
+    1.8
+   ],
+   [
+    "A",
+    1.4
+   ],
+   [
+    "BBB",
+    7.8
+   ],
+   [
+    "BB",
+    10.6
+   ],
+   [
+    "B",
+    3.1
+   ],
+   [
+    "CCC & Below",
+    1.1
+   ],
+   [
+    "NR",
+    3.2
+   ],
+   [
+    "Cash & Equivalents",
+    0.9
+   ],
+   [
+    "Equities",
+    66.7
+   ]
+  ]
+ },
+ "managers": [
+  {
+   "team": "Mackenzie Bluewater Team",
+   "people": [
+    "Shah Khan",
+    "Tyler Hewlett",
+    "Dave Taylor"
+   ]
+  },
+  {
+   "team": "Mackenzie Fixed Income Team",
+   "people": [
+    "Konstantin Boehmer",
+    "Felix Wong",
+    "Dan Cooper"
+   ]
+  },
+  {
+   "team": "Mackenzie Multi-Asset Strategies Team",
+   "people": [
+    "Nelson Arruda"
+   ]
+  }
+ ],
+ "calendar": {
+  "asof": "06/30/2026",
+  "series": [
+   [
+    "'16",
+    6.7
+   ],
+   [
+    "'17",
+    9.8
+   ],
+   [
+    "'18",
+    -2.1
+   ],
+   [
+    "'19",
+    16.5
+   ],
+   [
+    "'20",
+    9.9
+   ],
+   [
+    "'21",
+    13.5
+   ],
+   [
+    "'22",
+    -10.7
+   ],
+   [
+    "'23",
+    8.5
+   ],
+   [
+    "'24",
+    9.6
+   ],
+   [
+    "'25",
+    2.9
+   ],
+   [
+    "YTD",
+    -0.9
+   ]
+  ]
+ },
+ "growth": {
+  "asof": "06/30/2026",
+  "points": [
+   10000,
+   9996,
+   10174,
+   10177,
+   10159,
+   9996,
+   10003,
+   10324,
+   10486,
+   10804,
+   10928,
+   11092,
+   11203,
+   10835,
+   11116,
+   11312,
+   11509,
+   11125,
+   10740,
+   10578,
+   10522,
+   10657,
+   10706,
+   10898,
+   10796,
+   10935,
+   11099,
+   10990,
+   11505,
+   11722,
+   12123,
+   12015,
+   11876,
+   11847,
+   11884,
+   12129,
+   12268,
+   12209,
+   12006,
+   11927,
+   12342,
+   12179,
+   12318,
+   12512,
+   12151,
+   12233,
+   12684,
+   12168,
+   12145,
+   12183,
+   12020,
+   12229,
+   12280,
+   11933,
+   12235,
+   12498,
+   12850,
+   13365,
+   13555,
+   13669,
+   13334,
+   13604,
+   13486,
+   13419,
+   13101,
+   12880,
+   12793,
+   13259,
+   12714,
+   12357,
+   12496,
+   12998,
+   13250,
+   12745,
+   12083,
+   12253,
+   12112,
+   11865,
+   12208,
+   12597,
+   12715,
+   12860,
+   13065,
+   13638,
+   13915,
+   14164,
+   14428,
+   13986,
+   14493,
+   14904,
+   15175,
+   14572,
+   14438,
+   14808,
+   14274,
+   14292,
+   14720,
+   14356,
+   14991,
+   15271,
+   15303,
+   15507,
+   15833,
+   15967,
+   16494,
+   16332,
+   16265,
+   16760,
+   16865,
+   16614,
+   17082,
+   17778,
+   17693,
+   17227,
+   17269,
+   17306,
+   17283,
+   17961,
+   17633,
+   18263,
+   17829
+  ],
+  "end_label": "$17,829",
+  "x_labels": [
+   "Jan-18",
+   "Jan-20",
+   "Jan-22",
+   "Jan-24",
+   "Jan-26"
+  ],
+  "y_ticks": [
+   5000,
+   10000,
+   15000,
+   20000
+  ]
+ },
+ "holdings": {
+  "asof": "05/31/2026",
+  "top_pct": 19.4,
+  "groups": [
+   {
+    "name": "Equity",
+    "rows": [
+     [
+      "Royal Bank of Canada",
+      4.1
+     ],
+     [
+      "Toronto-Dominion Bank/The",
+      3.3
+     ],
+     [
+      "Franco-Nevada Corp",
+      2.7
+     ],
+     [
+      "Canadian Pacific Kansas City Ltd",
+      2.2
+     ],
+     [
+      "Alphabet Inc",
+      2.0
+     ]
+    ]
+   },
+   {
+    "name": "Fixed Income",
+    "rows": [
+     [
+      "Government of Canada 3.25% 06-01-2035",
+      1.4
+     ],
+     [
+      "Government of Canada 2.75% 12-01-2055",
+      1.4
+     ],
+     [
+      "United States Treasury 1.13% 10-15-2030 Inflation Indexed",
+      0.9
+     ],
+     [
+      "Enbridge Inc. 5.37% 09-27-2077 Callable 2027",
+      0.7
+     ],
+     [
+      "Mackenzie Global Corporate Fixed Income Fund Series R",
+      0.6
+     ]
+    ]
+   }
+  ],
+  "totals": [
+   [
+    "TOTAL NUMBER OF EQUITY HOLDINGS",
+    "85"
+   ],
+   [
+    "TOTAL NUMBER OF FIXED INCOME HOLDINGS",
+    "634"
+   ]
+  ]
+ },
+ "risk_measures": {
+  "asof": "06/30/2026",
+  "rows": [
+   [
+    "Annual Std Dev",
+    "7.06"
+   ],
+   [
+    "Beta",
+    "0.70"
+   ],
+   [
+    "B'mark Annual Std Dev.",
+    "8.48"
+   ],
+   [
+    "R-squared",
+    "0.71"
+   ],
+   [
+    "Alpha",
+    "-8.79"
+   ],
+   [
+    "Sharpe Ratio",
+    "0.09"
+   ]
+  ]
+ },
+ "key_data": {
+  "kv": [
+   [
+    "Total Fund Assets:",
+    "$3.1 billion"
+   ],
+   [
+    "NAVPS (06/30/2026):",
+    "C$13.62  US$9.59"
+   ],
+   [
+    "MER (as of Mar. 2026):",
+    "A: 2.30%  F: 0.95%"
+   ],
+   [
+    "Management Fee:",
+    "A: 1.85%  F: 0.70%"
+   ]
+  ],
+  "benchmark": "BLEND 39% S&P/TSX Composite + 26% MSCI World Quality Net + 21% FTSE Canada Universe Bond + 7% ICE BofA High Yield Canadian Issuers (Hgd to CAD) + 7% ICE BofA US High Yield (Hgd to CAD)",
+  "distributions": [
+   [
+    "A",
+    "Annually",
+    "0.5274",
+    "12/23/2025"
+   ],
+   [
+    "F",
+    "Annually",
+    "0.6705",
+    "12/23/2025"
+   ],
+   [
+    "T5",
+    "Monthly",
+    "0.0375",
+    "6/19/2026"
+   ],
+   [
+    "PW",
+    "Annually",
+    "0.6609",
+    "12/23/2025"
+   ]
+  ],
+  "code_cols": [
+   "Series (C$)",
+   "Prefix",
+   "FE",
+   "BE*"
+  ],
+  "codes": [
+   [
+    "A",
+    "MFC",
+    "724",
+    "824"
+   ],
+   [
+    "F",
+    "MFC",
+    "090",
+    "—"
+   ],
+   [
+    "T5",
+    "MFC",
+    "2444",
+    "3452"
+   ],
+   [
+    "PW",
+    "MFC",
+    "6154",
+    "—"
+   ]
+  ]
+ },
+ "why": [
+  "Seeks to deliver long-term growth of capital by investing in high quality companies complemented with a Core Plus investment approach to fixed income selection.",
+  "Invest in niche market leaders which are not typical household names.",
+  "The portfolio management team believes that the addition of non-investment grade securities in a Core Plus fixed income strategy can enhance overall returns and reduce interest rate risk.",
+  "*Core plus fixed income encompasses all fixed income products including both securitized and non-securitized loans including floating rate loans and high yield debt."
+ ],
+ "risk_level": 1,
+ "disclaimers": [
+  "* Effective June 1, 2022, the redemption charge purchase option, and the low-load purchase option are no longer available for purchase, including those made through systematic purchase plans such as pre-authorized contribution plans. Switching from securities of a Mackenzie Fund previously purchased under the redemption charge or low-load purchase options to securities of another Mackenzie Fund, under the same purchase option, will continue to be available until such redemption schedules expire.",
+  "** The blended index is composed of 65% S&P/TSX Composite Index and 35% FTSE Canada Universe Bond Index.",
+  "‡ The major holdings of the Fund may, but do not necessarily, represent the largest holdings of the Fund. Rather, the major holdings are selected for their overall significance in evaluating the investment portfolio.",
+  "‡‡ Credit ratings and rating categories are based on ratings issued by a designated rating organization.",
+  "† Commissions, trailing commissions, management fees, and expenses all may be associated with mutual fund investments. Please read the prospectus before investing. The indicated rates of return are the historical annual compounded total returns as of June 30, 2026 including changes in unit value and reinvestment of all distributions and do not take into account sales, redemption, distribution, or optional charges or income taxes payable by any securityholder that would have reduced returns. Mutual funds are not guaranteed, their values change frequently and past performance may not be repeated. Standard deviation provides a measure of the variability of returns that have occurred relative to the average return. The higher the standard deviation, the greater is the range of returns that has been experienced. Standard deviation is commonly used as a measure of risk.",
+  "For detailed portfolio manager commentary, visit the fund codes page."
+ ]
+}

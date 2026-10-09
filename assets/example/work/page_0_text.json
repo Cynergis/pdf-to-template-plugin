@@ -1,0 +1,171 @@
+[
+ {
+  "span_id": "s1",
+  "text": "Mackenzie Bluewater Canadian Growth Balanced Fund",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s2",
+  "text": "Series A",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s3",
+  "text": "Compound Annualized Returns\u2020",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s4",
+  "text": "06/30/2026",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s5",
+  "text": "1 Month",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s6",
+  "text": "0.4%",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s7",
+  "text": "3 Months",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s8",
+  "text": "3.9%",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s9",
+  "text": "Key Fund Data",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s10",
+  "text": "Total Fund Assets:",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s11",
+  "text": "$3.1 billion",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s12",
+  "text": "MER (as of Mar. 2026):",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ },
+ {
+  "span_id": "s13",
+  "text": "A: 2.30% F: 0.95%",
+  "bbox": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "font": "x",
+  "size": 7,
+  "color": "#222222"
+ }
+]

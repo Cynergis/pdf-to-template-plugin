@@ -1,0 +1,26 @@
+{
+  "en": {
+    "series": "Series", "categories": {"balanced": "Balanced", "equity": "Canadian Equity", "fixed_income": "Fixed Income"},
+    "returns": "Compound Annualized Returns", "regional": "Regional Allocation", "sector": "Sector Allocation",
+    "credit": "Credit Allocation", "managers": "Portfolio Managers", "calendar": "Calendar Year Returns",
+    "growth": "Value of $10,000 invested", "holdings": "Major Holdings",
+    "holdings_note": "Major Holdings Represent %s of the fund", "risk_measures": "Fund Risk Measures (3 year)",
+    "source": "Source: Fund data provider", "key_data": "Key Fund Data", "benchmark": "Benchmark**:",
+    "distribution": "Last Paid Distribution:", "dist_cols": ["Series", "Frequency", "Amount", "Date"],
+    "fund_codes": "Fund Codes:", "more_series": "Additional fund series available at the fund codes page",
+    "why": "Why Invest in this fund?", "risk_tol": "Risk Tolerance",
+    "risk_levels": ["LOW", "", "MEDIUM", "", "HIGH"], "pct_sep": "."
+  },
+  "fr": {
+    "series": "Série", "categories": {"balanced": "Équilibré", "equity": "Actions canadiennes", "fixed_income": "Revenu fixe"},
+    "returns": "Rendements annuels composés", "regional": "Répartition régionale", "sector": "Répartition sectorielle",
+    "credit": "Répartition par cote de crédit", "managers": "Gestionnaires de portefeuille", "calendar": "Rendements par année civile",
+    "growth": "Valeur d'un placement de 10 000 $", "holdings": "Principaux titres",
+    "holdings_note": "Les principaux titres représentent %s du fonds", "risk_measures": "Mesures du risque (3 ans)",
+    "source": "Source : fournisseur de données", "key_data": "Données clés du fonds", "benchmark": "Indice de réf.** :",
+    "distribution": "Dernière distribution versée :", "dist_cols": ["Série", "Fréquence", "Montant", "Date"],
+    "fund_codes": "Codes du fonds :", "more_series": "Autres séries offertes sur la page des codes de fonds",
+    "why": "Pourquoi investir dans ce fonds?", "risk_tol": "Tolérance au risque",
+    "risk_levels": ["FAIBLE", "", "MOYENNE", "", "ÉLEVÉE"], "pct_sep": ","
+  }
+}

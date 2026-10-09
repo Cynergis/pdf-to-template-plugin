@@ -1,0 +1,154 @@
+{
+ "source_sha256": "cacc2f7888f341aabc3d3140a645dd1a46ca00611f7348db099ac4f1f6ea2002",
+ "layout": "balanced",
+ "report_kind": "fund-fact-sheet",
+ "pages": [
+  {
+   "page": 0,
+   "regions": [
+    {
+     "region_id": "r1",
+     "component": "header",
+     "section_id": "header",
+     "bbox_pt": [
+      24,
+      60,
+      588,
+      110
+     ],
+     "static_span_ids": [],
+     "slot_names": [
+      "fund_name",
+      "series"
+     ]
+    },
+    {
+     "region_id": "r2",
+     "component": "returns_table",
+     "section_id": "returns",
+     "bbox_pt": [
+      24,
+      150,
+      210,
+      290
+     ],
+     "title_span_id": "s3",
+     "static_span_ids": [
+      "s5",
+      "s7"
+     ],
+     "slot_names": [
+      "returns_as_of",
+      "returns[].value"
+     ]
+    },
+    {
+     "region_id": "r3",
+     "component": "key_value_list",
+     "section_id": "key_data",
+     "bbox_pt": [
+      400,
+      150,
+      588,
+      420
+     ],
+     "title_span_id": "s9",
+     "static_span_ids": [
+      "s10",
+      "s12"
+     ],
+     "slot_names": [
+      "key_data.total_fund_assets",
+      "key_data.mer"
+     ]
+    }
+   ]
+  }
+ ],
+ "slots": [
+  {
+   "name": "fund_name",
+   "type": "text",
+   "region_id": "r1",
+   "source_span_ids": [
+    "s1"
+   ],
+   "example": "Mackenzie Bluewater Canadian Growth Balanced Fund",
+   "max_len_observed": 49
+  },
+  {
+   "name": "series",
+   "type": "text",
+   "region_id": "r1",
+   "source_span_ids": [
+    "s2"
+   ],
+   "label": "Series",
+   "example": "A"
+  },
+  {
+   "name": "returns_as_of",
+   "type": "date",
+   "region_id": "r2",
+   "source_span_ids": [
+    "s4"
+   ],
+   "format": "MM/DD/YYYY",
+   "example": "06/30/2026"
+  },
+  {
+   "name": "returns[].value",
+   "type": "percent",
+   "region_id": "r2",
+   "source_span_ids": [
+    "s6",
+    "s8"
+   ],
+   "repeat": true,
+   "group_of": "returns",
+   "label_span_id": "s5",
+   "format": "0.0%",
+   "example": "0.4%"
+  },
+  {
+   "name": "key_data.total_fund_assets",
+   "type": "currency",
+   "region_id": "r3",
+   "source_span_ids": [
+    "s11"
+   ],
+   "label_span_id": "s10",
+   "label": "Total Fund Assets",
+   "example": "$3.1 billion"
+  },
+  {
+   "name": "key_data.mer",
+   "type": "percent_by_series",
+   "region_id": "r3",
+   "source_span_ids": [
+    "s13"
+   ],
+   "label_span_id": "s12",
+   "label": "MER",
+   "example": "A: 2.30% F: 0.95%"
+  }
+ ],
+ "components": [
+  {
+   "name": "header",
+   "kind": "header",
+   "reused": true
+  },
+  {
+   "name": "returns_table",
+   "kind": "table",
+   "reused": true
+  },
+  {
+   "name": "key_value_list",
+   "kind": "key_value",
+   "reused": true
+  }
+ ],
+ "unassigned_span_ids": []
+}

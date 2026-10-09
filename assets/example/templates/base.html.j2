@@ -1,0 +1,32 @@
+{% import "components.j2" as c with context %}
+<!doctype html><html lang="{{ lang }}"><head><meta charset="utf-8">
+<style>{% include "tokens.css" %}</style></head><body>
+<div class="logo">{% if brand.logo %}<img src="{{ brand.logo }}" height="30">{% else %}<span style="border:1px dashed #999;padding:4px 10px;font:400 7pt var(--sans);color:#999">LOGO</span>{% endif %}</div>
+<h1>{{ f.name }}<small>{{ t.series }} {{ f.series }}</small></h1>
+<div class="category">{{ t.categories[f.category] }}</div>
+
+<div class="grid">
+{% for column in layout.columns %}<div class="col">
+  {% for slot in column %}
+    {% if slot == "returns" %}{{ c.returns_table(f.returns, t) }}
+    {% elif slot == "regional" %}{{ c.grouped_alloc(f.regional, t) }}
+    {% elif slot == "sector" %}{{ c.two_col_alloc(t.sector, f.sector) }}
+    {% elif slot == "credit" %}{{ c.two_col_alloc(t.credit ~ "‡‡", f.credit) }}
+    {% elif slot == "managers" %}{{ c.managers(f.managers, t) }}
+    {% elif slot == "calendar" %}{{ c.calendar_bars(f.calendar, t) }}
+    {% elif slot == "growth" %}{{ c.growth_10k(f.growth, t) }}
+    {% elif slot == "holdings" %}{{ c.holdings(f.holdings, t) }}
+    {% elif slot == "risk_measures" %}{{ c.risk_measures(f.risk_measures, t) }}
+    {% elif slot == "key_data" %}{{ c.key_data(f.key_data, t) }}
+    {% elif slot == "why" %}{{ c.why_invest(f.why, t) }}
+    {% elif slot == "risk_tolerance" %}{{ c.risk_tolerance(f.risk_level, t) }}
+    {% endif %}
+  {% endfor %}
+</div>{% endfor %}
+</div>
+
+<div class="foot">
+  <div class="qr"></div>
+  {% for p in f.disclaimers %}<p>{{ p }}</p>{% endfor %}
+</div>
+</body></html>

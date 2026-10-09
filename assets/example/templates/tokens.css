@@ -1,0 +1,56 @@
+/* Design tokens — sampled from the source fact sheet. Swap fonts for licensed brand fonts. */
+:root{
+  --ink:#222; --ink-soft:#555;
+  --brand:#00477f;        /* bars, line, risk band */
+  --brand-dark:#0e2a52;   /* title */
+  --band:#e6eff9;         /* category band */
+  --rule:#999; --rule-dot:#b5b5b5;
+  --serif:"Caladea","Lora",Georgia,serif;
+  --sans:"DejaVu Sans",Arial,sans-serif;
+  --fs-body:7.1pt; --fs-h2:11pt; --fs-title:19pt;
+}
+@page{size:Letter;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-stretch:condensed;font-family:var(--sans);font-size:var(--fs-body);color:var(--ink);line-height:1.32;
+     width:8.5in;height:11in;padding:.32in .36in;position:relative;background:#fff}
+
+/* header */
+.logo{height:30px;display:flex;align-items:center;gap:6px;font:700 13pt var(--sans);color:var(--brand-dark)}
+.logo .mark{width:34px;height:20px;background:var(--brand);clip-path:polygon(0 100%,50% 0,100% 100%,75% 100%,50% 45%,25% 100%)}
+h1{font:400 var(--fs-title) var(--serif);color:var(--brand-dark);margin:12px 0 6px}
+h1 small{font-size:10pt;margin-left:4px}
+.category{background:var(--band);font:400 11pt var(--serif);color:var(--brand-dark);padding:3px 6px;margin-bottom:12px}
+
+/* grid */
+.grid{display:grid;grid-template-columns:minmax(0,31%) minmax(0,30.5%) minmax(0,1fr);gap:0 7px}
+.col{min-width:0;display:flex;flex-direction:column;gap:3px}
+.box{border:1px solid var(--rule);padding:2px 4px 3px}
+.box h2{font:400 var(--fs-h2) var(--serif);display:flex;justify-content:space-between;align-items:baseline;
+        border-bottom:1px solid var(--rule);margin:0 -4px 2px;padding:0 4px 1px}
+.box h2 .asof{font:var(--fs-body) var(--sans)}
+
+/* rows */
+.row{display:flex;justify-content:space-between}
+.row.dot{border-bottom:1px dotted var(--rule-dot)}
+.row .v{text-align:right}
+.grp{font-weight:700;text-transform:uppercase}
+.ind{padding-left:6px}
+table{width:100%;border-collapse:collapse}
+td,th{padding:0 2px;vertical-align:top;text-align:left;font-weight:400}
+th{font-weight:700;text-transform:uppercase;border-bottom:1px solid var(--rule)}
+td.n,th.n{text-align:right;white-space:nowrap} td.c,th.c{text-align:center}
+.kv{display:flex;justify-content:space-between;border-bottom:1px dotted var(--rule-dot);padding:1px 0;font-size:7.4pt}
+.kv b{font-weight:400;font-size:8.6pt}
+.bench{font-size:8.2pt;text-align:right;padding:3px 0;border-bottom:1px dotted var(--rule-dot)}
+ul{padding-left:8px} li{margin-bottom:1px}
+.risk{display:flex;margin:6px 4px 4px;font-size:6pt}
+.risk span{flex:1;text-align:center;padding:4px 0;background:#eee;border-right:2px solid #fff}
+.risk span.on{background:var(--brand);color:#fff}
+.note{font-style:italic}
+svg text{font-family:var(--sans);font-stretch:condensed}
+.box li,.box .note{white-space:normal}
+
+/* footer */
+.foot{position:absolute;left:.36in;right:.36in;bottom:.3in;font-size:5.3pt;color:var(--ink-soft)}
+.foot .qr{width:42px;height:42px;background:repeating-conic-gradient(#222 0 25%,#fff 0 50%) 0 0/8px 8px;margin-bottom:6px}
+.foot p{margin-bottom:2px}

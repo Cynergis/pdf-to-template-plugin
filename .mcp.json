@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "report-ontology": {
+      "command": "uv",
+      "args": [
+        "run",
+        "--no-project",
+        "--with-requirements",
+        "${REPORT_ONTOLOGY_HOME}/requirements.txt",
+        "python",
+        "${REPORT_ONTOLOGY_HOME}/tools/mcp_server.py"
+      ],
+      "env": {
+        "REPORTS_ROOT": "${REPORTS_ROOT:-}",
+        "FLOW_ROOT": "${FLOW_ROOT:-}"
+      }
+    }
+  }
+}

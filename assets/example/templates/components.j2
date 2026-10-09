@@ -1,0 +1,73 @@
+{# Component library. Each macro = one box type. Layouts only arrange these. #}
+
+{% macro box(title, asof=None) %}
+<section class="box"><h2><span>{{ title }}</span>{% if asof %}<span class="asof">{{ asof }}</span>{% endif %}</h2>
+{{ caller() }}</section>
+{% endmacro %}
+
+{% macro returns_table(d, t) %}{% call box(t.returns ~ "†", d.asof) %}
+  {% for label, v in d.rows %}<div class="row dot"><span>{{ label }}</span><span class="v">{{ v|pct(1) }}</span></div>{% endfor %}
+{% endcall %}{% endmacro %}
+
+{% macro grouped_alloc(d, t) %}{% call box(t.regional, d.asof) %}
+  {% for g in d.groups %}<div class="row"><span class="grp">{{ g.name }}</span>{% if g.value is not none %}<span>{{ g.value|pct(1) }}</span>{% endif %}</div>
+    {% for name, v in g.rows %}<div class="row ind"><span>{{ name }}</span><span>{{ v|pct(1) }}</span></div>{% endfor %}
+  {% endfor %}
+{% endcall %}{% endmacro %}
+
+{# two-up allocation: list flows into 2 columns regardless of length #}
+{% macro two_col_alloc(title, d) %}{% call box(title, d.asof) %}
+  {% set half = (d.rows|length + 1) // 2 %}
+  <table><tbody>{% for i in range(half) %}<tr>
+    {% for r in [d.rows[i], d.rows[i+half] if i+half < d.rows|length else None] %}
+      {% if r %}<td>{{ r[0] }}</td><td class="n">{{ r[1]|pct(1) }}</td>{% else %}<td></td><td></td>{% endif %}
+    {% endfor %}</tr>{% endfor %}</tbody></table>
+{% endcall %}{% endmacro %}
+
+{% macro managers(d, t) %}{% call box(t.managers) %}
+  {% for team in d %}<div style="font-weight:700">{{ team.team }}</div><div class="ind">{{ team.people|join(", ") }}</div>{% endfor %}
+{% endcall %}{% endmacro %}
+
+{% macro calendar_bars(d, t) %}{% call box(t.calendar ~ " (%)", d.asof) %}
+  {{ d.series|bar_svg(charts.calendar)|safe }}
+{% endcall %}{% endmacro %}
+
+{% macro growth_10k(d, t) %}{% call box(t.growth, d.asof) %}
+  {{ d|line_svg(charts.growth)|safe }}
+{% endcall %}{% endmacro %}
+
+{% macro holdings(d, t) %}{% call box(t.holdings ~ "‡", d.asof) %}
+  <div class="note">{{ t.holdings_note|format(d.top_pct|pct(1)) }}</div>
+  {% for g in d.groups %}<div class="grp">{{ g.name }}</div>
+    {% for name, v in g.rows %}<div class="row ind"><span>{{ name }}</span><span>{{ v|pct(1) }}</span></div>{% endfor %}
+  {% endfor %}
+  <div style="border-top:1px solid var(--rule);margin-top:3px">
+  {% for k, v in d.totals %}<div>{{ k }}: {{ v }}</div>{% endfor %}</div>
+{% endcall %}{% endmacro %}
+
+{% macro risk_measures(d, t) %}{% call box(t.risk_measures, d.asof) %}
+  <table>{% for row in d.rows|batch(2) %}<tr>{% for k, v in row %}<td>{{ k }}</td><td class="n">{{ v }}</td>{% endfor %}</tr>{% endfor %}</table>
+  <div style="font-size:5.5pt;margin-top:2px">{{ t.source }}</div>
+{% endcall %}{% endmacro %}
+
+{% macro key_data(d, t) %}{% call box(t.key_data) %}
+  {% for k, v in d.kv %}<div class="kv"><span>{{ k }}</span><b>{{ v }}</b></div>{% endfor %}
+  <div class="bench"><span style="float:left;font-size:6.6pt;margin-top:30px">{{ t.benchmark }}</span>{{ d.benchmark }}</div>
+  <div style="margin-top:3px">{{ t.distribution }}</div>
+  <table><tr>{% for h in t.dist_cols %}<th class="{{ 'n' if loop.index>2 else '' }}">{{ h }}</th>{% endfor %}</tr>
+  {% for r in d.distributions %}<tr><td>{{ r[0] }}</td><td>{{ r[1] }}</td><td class="n">{{ r[2] }}</td><td class="n">{{ r[3] }}</td></tr>{% endfor %}</table>
+  <div style="background:#f1f1f1;margin:6px -2px 0;padding:3px 4px">
+    <div style="font-weight:700">{{ t.fund_codes }}</div>
+    <table><tr>{% for h in d.code_cols %}<th class="{{ '' if loop.first else 'c' }}">{{ h }}</th>{% endfor %}</tr>
+    {% for r in d.codes %}<tr>{% for c in r %}<td class="{{ '' if loop.first else 'c' }}">{{ c }}</td>{% endfor %}</tr>{% endfor %}</table>
+    <div class="note">{{ t.more_series }}</div>
+  </div>
+{% endcall %}{% endmacro %}
+
+{% macro why_invest(d, t) %}{% call box(t.why) %}
+  <ul>{% for b in d %}<li>{{ b }}</li>{% endfor %}</ul>
+{% endcall %}{% endmacro %}
+
+{% macro risk_tolerance(d, t) %}{% call box(t.risk_tol) %}
+  <div class="risk">{% for lvl in t.risk_levels %}<span class="{{ 'on' if loop.index0 == d else '' }}">{{ lvl if loop.index0 != d else '' }}</span>{% endfor %}</div>
+{% endcall %}{% endmacro %}
