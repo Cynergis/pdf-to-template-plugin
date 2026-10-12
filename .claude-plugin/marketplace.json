@@ -7,7 +7,7 @@
     {
       "name": "pdf-to-template",
       "source": "./",
-      "description": "Define report types with a report analyst, ask questions about the report catalogue, and turn a sample PDF into a data-driven template."
+      "description": "Turn a sample PDF into a data-driven template that renders new data to PDF; the report's definition lives in an OTO project (the report pack)."
     }
   ]
 }

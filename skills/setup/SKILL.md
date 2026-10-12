@@ -49,8 +49,14 @@ Then open `reports/fund-profile/out/bluewater_A_en.png` in the editor for them (
 and PDFs in a tab) and say what the folder holds: templates, config, data, out. From here the
 `pdf-to-template` skill builds a template from their own PDF.
 
-## 4. The report ontology server (optional)
+## 4. Where the report's definition lives
 
-The plugin's `report-ontology` MCP server clones `Cynergis/report-ontology` into the user's cache on
-first start and needs no environment variable. If `/mcp` shows it failed, the cause is `uv` or `git`
-not on the PATH of the editor, or no network for the clone; the template work does not need it.
+A report's definition (its sections, fields, meanings, columns and status) lives in an OTO project,
+not in this plugin. Building a template from a PDF of their own needs:
+
+- the `oto` plugin and the `report` pack installed: `/report:new-report` is in the `/` list;
+- the project folder to be an OTO project: it holds `project.config.json` and `oto status
+  --project <root>` describes it. If it does not, the report pack's start skill (`/report:start`)
+  makes one in the same folder; `reports/` sits beside it.
+
+Say which of these is missing. The example (section 3) needs neither.

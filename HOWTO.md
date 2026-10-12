@@ -41,9 +41,14 @@ link, which does the same in one step:
 vscode://anthropic.claude-code/install-plugin?plugin=pdf-to-template&marketplace=Cynergis/oto-registry
 ```
 
-Check: type `/` in the prompt box; the list shows `/pdf-to-template:setup`,
-`/pdf-to-template:pdf-to-template`, `/pdf-to-template:new-report` and
-`/pdf-to-template:ask-reports`.
+Check: type `/` in the prompt box; the list shows `/pdf-to-template:setup` and
+`/pdf-to-template:pdf-to-template`.
+
+**The report's definition.** What a report is (its sections, fields, meanings, the column behind
+each value) is defined in an OTO project with the `report` pack, installed from the same
+`/plugins` dialog with the `oto` plugin: `/report:start` makes the project in this folder,
+`/report:new-report` defines a report with you, `/report:ask-reports` answers questions about it.
+Section 2 below needs none of this; section 3 does.
 
 **The tools.** Nothing to install by hand. Type:
 
@@ -96,15 +101,20 @@ Bring one real report as a PDF. Two issues of the same report (two months, same 
 language) are better than one: what changed between them is data, the rest is design, and the
 inspection finds the data slots for you.
 
-Drag the PDF into `reports/<report-id>/source/` in the VS Code Explorer (create the folders, or
-ask Claude to), or just tell Claude where the file is. Use a short id in lower case with hyphens,
-such as `equity-fact-sheet`. Then:
+Define the report first, with the same PDF: `/report:new-report` interviews you as the analyst
+and records the report's sections, fields, meanings and columns in the project's knowledge graph.
+The template is built from that definition. Drag the PDF into `reports/<report-id>/source/` in the
+VS Code Explorer (create the folders, or ask Claude to), or just tell Claude where the file is. Use
+the report id the definition was recorded under, lower case with hyphens, such as
+`equity-fact-sheet`. Then:
 
 ```text
 /pdf-to-template:pdf-to-template build a template from reports/<report-id>/source/sample.pdf
 ```
 
-Claude follows the skill's six steps. What happens, and what you are asked at each one:
+Claude reads the report's definition from the graph (its sections in order, the labels per
+language, the column behind each field, the thresholds), then follows the skill's six steps. What
+happens, and what you are asked at each one:
 
 1. **Inspect.** The verdict for each page is read from `work/report.json`:
    - `vector`: real text and drawings. Fonts, sizes, colors and box positions are measured, not
@@ -147,21 +157,19 @@ A data file holds facts only, no positions and no styling. A list or a table is 
 in the shape the template reads; the renderer is strict, so a missing field fails loudly instead
 of printing a blank. The PNG is the quick check; the PDF is the real thing.
 
-## 5. Before production: what the report ontology checks
+## 5. Before production: what the graph still lacks
 
-The folder also holds `semantic/report.yaml` (what the report is, its sections and what each
-field means), `semantic/lineage.yaml` (the table and column behind each field) and
-`semantic/provenance.yaml` (the report's status history). They are written with
-`/pdf-to-template:new-report`, which interviews you as the analyst, and read with
-`/pdf-to-template:ask-reports`. The plugin's report ontology server starts by itself (it keeps a
-copy of the ontology in your user cache). Before freezing, ask:
+The template build records the sample PDF, the build and its sign-offs, and the frozen release in
+the project's knowledge graph, beside the report's definition, through OTO's gates. Before
+freezing, ask:
 
 ```text
-run the ontology's gaps check on reports/<report-id>
+what does the graph still lack about <report-id> before production?
 ```
 
-Nothing may be blocking; the warnings (a field with no column, a missing language) are what still
-stands between the template and a production release.
+The gates must find nothing blocking; the open questions (a field with no column, a missing
+language, what the release still needs) are what stands between the template and a production
+release. `/report:ask-reports` answers anything else about the report.
 
 ## 6. When something goes wrong
 
@@ -173,12 +181,11 @@ stands between the template and a production release.
 | a box overflows (the renderer names it) | the box does not fit its cell | ask Claude to fix that box; usually a column width or a label that may not wrap |
 | verdict `raster` | the PDF is a picture | ask for the production PDF; otherwise accept capped fidelity and sign off on the side by side |
 | the diff score stays low while the render looks right | the fonts differ | the score tolerates that; a licensed brand font from `work/fonts/` closes the gap |
-| the `report-ontology` server failed (`/mcp`) | `git` or `uv` is not on the editor's PATH, or no network for the first clone | ignore for template work; needed only for section 5 |
+| `/report:new-report` is not in the `/` list | the `oto` plugin or the `report` pack is not installed | install both from `/plugins`; `/pdf-to-template:setup` says which is missing |
 
 ## 7. Where to go next
 
-- Define the report as facts before the template: `/pdf-to-template:new-report`, with the same
-  sample PDF, so the catalogue can answer what the report is, where its data comes from and when
-  it runs.
+- Ask about the catalogue: `/report:ask-reports` (which reports exist, what a field means, which
+  column supplies it, when a report runs).
 - Build and run it as a flow, with Claude writing each step from its brief: the `flow` plugin from
   the same marketplace, installed from the same `/plugins` dialog.

@@ -8,7 +8,9 @@ result for them.
 
 - `reports/<report-id>/` is one report type: `source/` (the sample PDF), `work/` (inspection
   output and the diff image), `templates/`, `config/`, `data/` (the template), `out/` (rendered
-  documents), `semantic/` and `manifest.json` (what the report is, written by `new-report`).
+  documents).
+- What a report is (its sections, fields, meanings, columns, status) lives in the OTO project in
+  this folder (`project.config.json`, the knowledge graph), not in `reports/`.
 - A report id is lower case with hyphens (`equity-fact-sheet`).
 
 ## How to work here
@@ -16,8 +18,9 @@ result for them.
 - First time, or when a script fails to start: the `pdf-to-template:setup` skill. It runs the
   plugin's doctor, which installs what is missing. Never ask the person to install anything.
 - Build a template from a PDF: the `pdf-to-template:pdf-to-template` skill. Render a document:
-  the same skill's renderer. Define the report's facts: `pdf-to-template:new-report`; ask about
-  them: `pdf-to-template:ask-reports`.
+  the same skill's renderer. Define the report's facts first: `report:new-report` (the OTO
+  `report` pack; `report:start` makes the project when there is none); ask about them:
+  `report:ask-reports`.
 - Scripts run with `uv run ${CLAUDE_PLUGIN_ROOT}/scripts/<name>.py`; they carry their own
   dependencies.
 - After every render or diff, open the result in the editor (the PNG, the PDF, `work/diff.png`)
