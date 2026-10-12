@@ -1,3 +1,7 @@
+# /// script
+# requires-python = ">=3.10"
+# dependencies = ["pymupdf>=1.24"]
+# ///
 """Step 1 — Inspect a source PDF and extract everything a template author needs.
 
 Usage:

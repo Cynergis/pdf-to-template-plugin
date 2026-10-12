@@ -23,17 +23,18 @@ Each report type has its own folder, `reports/<report-id>/`, in the project. Def
 `new-report` skill: it creates that folder, records the sample PDF and captures what the report is, where its data
 comes from and how it runs. This skill then builds the template inside the same folder.
 
-## Setup (once)
+## Setup
 
-```bash
-pip install -r ${CLAUDE_PLUGIN_ROOT}/requirements-render.txt
-playwright install chromium
-```
+Nothing to install by hand. Each script declares its own dependencies (inline script metadata), so
+`uv run <script>` fetches them into a cached environment the first time; the renderer downloads
+Chromium itself on the first render. The one requirement is `uv` on the PATH. When in doubt, or when a
+script fails to start, run the `setup` skill (`uv run ${CLAUDE_PLUGIN_ROOT}/scripts/doctor.py --fix`): it
+reports what is missing and installs what it can.
 
 ## 1. Inspect — find out what you actually have
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/inspect_pdf.py source.pdf --out work/
+uv run ${CLAUDE_PLUGIN_ROOT}/scripts/inspect_pdf.py source.pdf --out work/
 ```
 
 Read `work/report.json` and look at `work/page_N.png`. The verdict decides the path:
@@ -48,7 +49,7 @@ If the user has **two issues of the same report** (same fund, same language, dif
 discover data slots automatically — spans that changed are data, the rest is static design:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/inspect_pdf.py aug.pdf --diff sep.pdf --out work/   # -> work/slots.json
+uv run ${CLAUDE_PLUGIN_ROOT}/scripts/inspect_pdf.py aug.pdf --diff sep.pdf --out work/   # -> work/slots.json
 ```
 
 ## 2. Palette
@@ -56,8 +57,8 @@ python ${CLAUDE_PLUGIN_ROOT}/scripts/inspect_pdf.py aug.pdf --diff sep.pdf --out
 Vector: take colors from `spans.json` / `drawings.json`. Raster:
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/sample_colors.py work/page_0_img_0.png --k 8
-python ${CLAUDE_PLUGIN_ROOT}/scripts/sample_colors.py work/page_0_img_0.png --crop 280,150,490,250   # one element (a bar)
+uv run ${CLAUDE_PLUGIN_ROOT}/scripts/sample_colors.py work/page_0_img_0.png --k 8
+uv run ${CLAUDE_PLUGIN_ROOT}/scripts/sample_colors.py work/page_0_img_0.png --crop 280,150,490,250   # one element (a bar)
 ```
 
 Global palettes include noise (annotation boxes, anti-aliasing). Crop to a specific element
@@ -93,7 +94,7 @@ Authoring rules — read `${CLAUDE_SKILL_DIR}/references/authoring.md` before wr
 ## 4. Render
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/render.py <project> <project>/data/doc.json --lang en --out out/
+uv run ${CLAUDE_PLUGIN_ROOT}/scripts/render.py <project> <project>/data/doc.json --lang en --out out/
 ```
 
 Writes `out/doc.html|pdf|png` and checks **every `.box` / `[data-slot]` element** for width/height
@@ -102,7 +103,7 @@ overflow and anything pushed below the page. Exit code 1 on any overflow.
 ## 5. Diff against the source and iterate
 
 ```bash
-python ${CLAUDE_PLUGIN_ROOT}/scripts/diff.py work/page_0.png out/doc.png --out work/diff.png --threshold 0.80
+uv run ${CLAUDE_PLUGIN_ROOT}/scripts/diff.py work/page_0.png out/doc.png --out work/diff.png --threshold 0.80
 ```
 
 Reference image: `page_N.png` for a vector source; for a raster source use the extracted

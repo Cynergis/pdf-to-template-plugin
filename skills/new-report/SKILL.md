@@ -47,7 +47,7 @@ analyst's words, not the ontology's.
 2. Ask for the path to the sample PDF and for the analyst's name. Agree a report id (lower case, hyphens) and
    create the folder. Record the first status at once (see "The report's status"), so the report is visible as
    started from this moment. Copy the PDF into `source/`, compute its sha256, and inspect it:
-   `python ${CLAUDE_PLUGIN_ROOT}/scripts/inspect_pdf.py <pdf> --out reports/<report-id>/work/`
+   `uv run ${CLAUDE_PLUGIN_ROOT}/scripts/inspect_pdf.py <pdf> --out reports/<report-id>/work/`
    Look at the page images yourself. If a page is `raster`, tell the analyst now that fidelity will be capped
    and ask whether a production (vector) PDF exists.
 
