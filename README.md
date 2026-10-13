@@ -35,7 +35,7 @@ Then `/pdf-to-template:setup`. From a terminal, the same is `claude plugin insta
 | Requirement | Why |
 |---|---|
 | `uv` on the PATH | It runs the scripts, each of which declares its own dependencies (inline script metadata). The `setup` skill installs it when it is missing. |
-| The `oto` plugin and the `report` pack | The report's definition: an OTO project in the same folder, started with `/report:start`, the report defined with `/report:new-report`. Not needed to render the example. |
+| The `oto` plugin and the `report` pack | The report's definition: an OTO project in the same folder, started with `/report:start`, the report defined with `/report:new-report`. Not needed to render the example. Declared as dependencies (0.4.1): installing this plugin from the registry installs both. |
 | A project with a `reports/` folder | One folder per report type, beside the OTO project's files. |
 
 Chromium for rendering is downloaded once by the renderer or by `setup`. `requirements-render.txt` lists the

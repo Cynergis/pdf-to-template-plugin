@@ -1,0 +1,31 @@
+name: tag release
+
+# Every version that reaches main gets its tag, v<version>, read from .claude-plugin/plugin.json, so
+# the OTO registry can list this plugin at a release (a pinned ref) rather than at main, and a
+# project's oto.lock.json rebuilds exactly the version it was built with.
+
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: write
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Tag the version when it is new
+        run: |
+          version=$(python3 -c "import json; print(json.load(open('.claude-plugin/plugin.json'))['version'])")
+          tag="v$version"
+          if git rev-parse -q --verify "refs/tags/$tag" >/dev/null; then
+            echo "$tag already exists"
+          else
+            git tag "$tag"
+            git push origin "refs/tags/$tag"
+            echo "tagged $tag"
+          fi

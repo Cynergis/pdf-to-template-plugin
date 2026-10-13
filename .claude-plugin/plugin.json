@@ -1,5 +1,9 @@
 {
   "name": "pdf-to-template",
-  "version": "0.4.0",
-  "description": "Turn a sample PDF into a data-driven HTML/CSS + Jinja2 template that renders new data to PDF, from the Claude Code panel in VS Code with no terminal. Reads the report's definition from an OTO project (the report pack) and records the sample, the build and the release there."
+  "version": "0.4.1",
+  "description": "Turn a sample PDF into a data-driven HTML/CSS + Jinja2 template that renders new data to PDF, from the Claude Code panel in VS Code with no terminal. Reads the report's definition from an OTO project (the report pack) and records the sample, the build and the release there.",
+  "dependencies": [
+    "oto",
+    "report"
+  ]
 }
