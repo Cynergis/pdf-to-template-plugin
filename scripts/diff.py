@@ -1,3 +1,7 @@
+# /// script
+# requires-python = ">=3.10"
+# dependencies = ["opencv-python-headless>=4.9", "numpy>=1.26", "scikit-image>=0.22"]
+# ///
 """Step 5 — Compare a render to the reference page and say WHERE it differs.
 
 Usage:

@@ -1,3 +1,7 @@
+# /// script
+# requires-python = ">=3.10"
+# dependencies = ["jinja2>=3.1", "playwright>=1.45"]
+# ///
 """Step 4 — Render data through a template project to HTML/PDF/PNG and check every box for overflow.
 
 Project layout (see assets/example):
@@ -12,7 +16,7 @@ Usage:
   python render.py <project> data/fund.json [data/other.json ...] --lang en --out out/
 Exit code 1 if any page or box overflows (use it as a gate).
 """
-import argparse, json, pathlib, sys
+import argparse, json, pathlib, subprocess, sys
 from jinja2 import Environment, FileSystemLoader, StrictUndefined
 from playwright.sync_api import sync_playwright
 
@@ -51,6 +55,18 @@ def make_env(proj, lang):
     return env
 
 
+def launch(p):
+    """Chromium is downloaded once, on the first render, so nothing has to be installed by hand."""
+    try:
+        return p.chromium.launch()
+    except Exception as e:  # playwright's own error names the install command
+        if "install" not in str(e):
+            raise
+        print("chromium is not installed yet; downloading it once (playwright install chromium)", file=sys.stderr)
+        subprocess.run([sys.executable, "-m", "playwright", "install", "chromium"], check=True)
+        return p.chromium.launch()
+
+
 def render(proj, data_paths, lang, out, brand=None):
     layouts, i18n, charts = load_project(proj)
     t = i18n.get(lang, {})
@@ -58,7 +74,7 @@ def render(proj, data_paths, lang, out, brand=None):
     out.mkdir(parents=True, exist_ok=True)
     results = []
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        browser = launch(p)
         for dp in data_paths:
             f = json.loads(pathlib.Path(dp).read_text())
             html = env.get_template("base.html.j2").render(

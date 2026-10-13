@@ -1,3 +1,7 @@
+# /// script
+# requires-python = ">=3.10"
+# dependencies = ["opencv-python-headless>=4.9", "numpy>=1.26"]
+# ///
 """Step 2 — Sample a design palette from an image (raster sources, or to cross-check vector colors).
 
 Usage:
