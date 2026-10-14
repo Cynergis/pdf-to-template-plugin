@@ -66,6 +66,12 @@ reports/<report-id>/
 | `assets/example/` | The example report folder. |
 | `starter/` | A workspace to copy. |
 
+## Releasing
+
+Raise `version` in `.claude-plugin/plugin.json` and merge to main. The release workflow tags `v<version>`,
+then opens the registry pull request that moves this plugin's pin to the tag (it needs the organisation
+secret `OTO_REGISTRY_TOKEN`). Merging that pull request is what makes a fresh install get the new version.
+
 ## Not in this plugin
 
 - **The report's definition, its vocabulary and its questions.** They live in OTO's `report` pack and the

@@ -2,7 +2,10 @@ name: tag release
 
 # Every version that reaches main gets its tag, v<version>, read from .claude-plugin/plugin.json, so
 # the OTO registry can list this plugin at a release (a pinned ref) rather than at main, and a
-# project's oto.lock.json rebuilds exactly the version it was built with.
+# project's oto.lock.json rebuilds exactly the version it was built with. A new tag then opens the
+# registry pull request that moves this plugin's pin to it, through the engine's shared workflow
+# (registry-pin.yml, which needs the secret OTO_REGISTRY_TOKEN): a tag pushed by this workflow starts
+# no other workflow, so that is a job here, not a workflow on tags.
 
 on:
   push:
@@ -14,18 +17,39 @@ permissions:
 jobs:
   tag:
     runs-on: ubuntu-latest
+    outputs:
+      created: ${{ steps.tag.outputs.created }}
+      tag: ${{ steps.tag.outputs.tag }}
+      version: ${{ steps.tag.outputs.version }}
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - name: Tag the version when it is new
+        id: tag
         run: |
           version=$(python3 -c "import json; print(json.load(open('.claude-plugin/plugin.json'))['version'])")
           tag="v$version"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
           if git rev-parse -q --verify "refs/tags/$tag" >/dev/null; then
             echo "$tag already exists"
+            echo "created=false" >> "$GITHUB_OUTPUT"
           else
             git tag "$tag"
             git push origin "refs/tags/$tag"
             echo "tagged $tag"
+            echo "created=true" >> "$GITHUB_OUTPUT"
           fi
+
+  pin:
+    needs: tag
+    if: needs.tag.outputs.created == 'true'
+    uses: Cynergis/oto/.github/workflows/registry-pin.yml@main
+    with:
+      plugin: pdf-to-template
+      repo: Cynergis/pdf-to-template-plugin
+      tag: ${{ needs.tag.outputs.tag }}
+      version: ${{ needs.tag.outputs.version }}
+    secrets:
+      OTO_REGISTRY_TOKEN: ${{ secrets.OTO_REGISTRY_TOKEN }}
