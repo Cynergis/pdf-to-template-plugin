@@ -1,5 +1,5 @@
 {
- "name": "Fonds Démo Actions canadiennes de croissance",
+ "name": "Fonds d'actions canadiennes Exemple",
  "series": "F",
  "category": "equity",
  "layout": "equity",
@@ -121,7 +121,7 @@
  "credit": null,
  "managers": [
   {
-   "team": "Équipe Démo Actions",
+   "team": "Équipe Actions Exemple",
    "people": [
     "Gestionnaire Un",
     "Gestionnaire Deux"
