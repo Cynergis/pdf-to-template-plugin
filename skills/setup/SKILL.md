@@ -13,6 +13,14 @@ description: >-
 The person works in VS Code with the Claude Code extension and does not use a terminal. You run the
 commands; they read the result.
 
+## Talking with the person
+
+- **Plain, natural language, in the person's words.** Never say question numbers, ids, class or
+  field names, file names or commands, and never paste what a command printed.
+- **Technical details only when the person asks for them.** Never offer them, not even as a choice.
+- **The same clear shape every time:** say what we are about to do, ask a few questions at a time,
+  read back what you understood in plain sentences, confirm, then say what is next.
+
 ## 1. Check and fix
 
 ```bash
@@ -26,9 +34,9 @@ in plain words and what you did about each.
 - `uv` missing: it is the one thing the scripts need. Install it for the person (macOS:
   `brew install uv` when Homebrew exists, otherwise `curl -LsSf https://astral.sh/uv/install.sh | sh`;
   Windows: `powershell -c "irm https://astral.sh/uv/install.ps1 | iex"`), then run the doctor again.
-  Say that VS Code may need a restart so the new PATH is seen.
-- Chromium still missing after `--fix`: show the download error; a proxy or a blocked network is the
-  usual cause.
+  Say that VS Code may need a restart to find it.
+- Chromium still missing after `--fix`: say that the download failed and its usual cause, a proxy or
+  a blocked network; show the error itself only when they ask.
 
 ## 2. The reports folder
 
@@ -46,7 +54,8 @@ uv run ${CLAUDE_PLUGIN_ROOT}/scripts/render.py reports/fund-profile reports/fund
 ```
 
 Then open `reports/fund-profile/out/sample_A_en.png` in the editor for them (VS Code shows PNGs
-and PDFs in a tab) and say what the folder holds: templates, config, data, out. From here the
+and PDFs in a tab) and say what the folder holds: the template, its settings, the data it reads
+and what it produced. From here the
 `pdf-to-template` skill builds a template from their own PDF.
 
 ## 4. Where the report's definition lives
@@ -59,4 +68,4 @@ not in this plugin. Building a template from a PDF of their own needs:
   --project <root>` describes it. If it does not, the report pack's start skill (`/report:start`)
   makes one in the same folder; `reports/` sits beside it.
 
-Say which of these is missing. The example (section 3) needs neither.
+Say in plain words which of these is missing, and offer to set it up. The example (section 3) needs neither.
