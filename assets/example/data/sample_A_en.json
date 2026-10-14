@@ -1,0 +1,610 @@
+{
+  "name": "Sample Canadian Balanced Fund",
+  "series": "A",
+  "category": "balanced",
+  "layout": "balanced",
+  "returns": {
+    "asof": "06/30/2026",
+    "rows": [
+      [
+        "1 Month",
+        0.6
+      ],
+      [
+        "3 Months",
+        3.7
+      ],
+      [
+        "Year-to-date",
+        -0.5
+      ],
+      [
+        "1 Year",
+        -1.0
+      ],
+      [
+        "2 Years",
+        3.6
+      ],
+      [
+        "3 Years",
+        4.2
+      ],
+      [
+        "5 Years",
+        2.9
+      ],
+      [
+        "10 Years",
+        5.5
+      ],
+      [
+        "Since inception (Jan. 2005)",
+        5.9
+      ]
+    ]
+  },
+  "regional": {
+    "asof": "05/31/2026",
+    "groups": [
+      {
+        "name": "Cash & Equivalents",
+        "value": null,
+        "rows": [
+          [
+            "Cash & Equivalents",
+            1.0
+          ]
+        ]
+      },
+      {
+        "name": "Equities",
+        "value": null,
+        "rows": [
+          [
+            "Canada",
+            34.2
+          ],
+          [
+            "United States",
+            26.3
+          ],
+          [
+            "Ireland",
+            1.1
+          ],
+          [
+            "Netherlands",
+            1.3
+          ],
+          [
+            "Other",
+            1.2
+          ]
+        ]
+      },
+      {
+        "name": "Fixed Income",
+        "value": null,
+        "rows": [
+          [
+            "Canada",
+            19.7
+          ],
+          [
+            "United States",
+            13.0
+          ],
+          [
+            "United Kingdom",
+            0.6
+          ],
+          [
+            "Norway",
+            0.4
+          ],
+          [
+            "Other",
+            1.2
+          ]
+        ]
+      }
+    ]
+  },
+  "sector": {
+    "asof": "05/31/2026",
+    "rows": [
+      [
+        "Fixed Income",
+        31.1
+      ],
+      [
+        "Financials",
+        19.8
+      ],
+      [
+        "Information Technology",
+        11.5
+      ],
+      [
+        "Industrials",
+        10.4
+      ],
+      [
+        "Materials",
+        7.0
+      ],
+      [
+        "Energy",
+        5.8
+      ],
+      [
+        "Health Care",
+        3.0
+      ],
+      [
+        "Communication Serv.",
+        3.5
+      ],
+      [
+        "Consumer Staples",
+        2.8
+      ],
+      [
+        "Consumer Discretionary",
+        3.3
+      ],
+      [
+        "Cash & Equivalents",
+        0.8
+      ],
+      [
+        "Other",
+        1.0
+      ]
+    ]
+  },
+  "credit": {
+    "asof": "05/29/2026",
+    "rows": [
+      [
+        "AAA",
+        2.8
+      ],
+      [
+        "AA",
+        1.8
+      ],
+      [
+        "A",
+        1.3
+      ],
+      [
+        "BBB",
+        8.2
+      ],
+      [
+        "BB",
+        9.1
+      ],
+      [
+        "B",
+        3.2
+      ],
+      [
+        "CCC & Below",
+        1.0
+      ],
+      [
+        "NR",
+        3.4
+      ],
+      [
+        "Cash & Equivalents",
+        0.8
+      ],
+      [
+        "Equities",
+        68.4
+      ]
+    ]
+  },
+  "managers": [
+    {
+      "team": "Sample Balanced Team",
+      "people": [
+        "Alex Martin",
+        "Sam Rivera",
+        "Jordan Lee"
+      ]
+    },
+    {
+      "team": "Sample Fixed Income Team",
+      "people": [
+        "Taylor Morgan",
+        "Casey Brown",
+        "Robin Clarke"
+      ]
+    },
+    {
+      "team": "Sample Multi-Asset Team",
+      "people": [
+        "Jamie Wilson"
+      ]
+    }
+  ],
+  "calendar": {
+    "asof": "06/30/2026",
+    "series": [
+      [
+        "'16",
+        6.1
+      ],
+      [
+        "'17",
+        8.8
+      ],
+      [
+        "'18",
+        -1.5
+      ],
+      [
+        "'19",
+        14.7
+      ],
+      [
+        "'20",
+        8.9
+      ],
+      [
+        "'21",
+        12.0
+      ],
+      [
+        "'22",
+        -9.0
+      ],
+      [
+        "'23",
+        7.7
+      ],
+      [
+        "'24",
+        8.7
+      ],
+      [
+        "'25",
+        2.8
+      ],
+      [
+        "YTD",
+        -0.5
+      ]
+    ]
+  },
+  "growth": {
+    "asof": "06/30/2026",
+    "points": [
+      10000,
+      9997,
+      10139,
+      10142,
+      10127,
+      9997,
+      10002,
+      10259,
+      10389,
+      10643,
+      10742,
+      10874,
+      10962,
+      10668,
+      10893,
+      11050,
+      11207,
+      10900,
+      10592,
+      10462,
+      10418,
+      10526,
+      10565,
+      10718,
+      10637,
+      10748,
+      10879,
+      10792,
+      11204,
+      11378,
+      11698,
+      11612,
+      11501,
+      11478,
+      11507,
+      11703,
+      11814,
+      11767,
+      11605,
+      11542,
+      11874,
+      11743,
+      11854,
+      12010,
+      11721,
+      11786,
+      12147,
+      11734,
+      11716,
+      11746,
+      11616,
+      11783,
+      11824,
+      11546,
+      11788,
+      11998,
+      12280,
+      12692,
+      12844,
+      12935,
+      12667,
+      12883,
+      12789,
+      12735,
+      12481,
+      12304,
+      12234,
+      12607,
+      12171,
+      11886,
+      11997,
+      12398,
+      12600,
+      12196,
+      11666,
+      11802,
+      11690,
+      11492,
+      11766,
+      12078,
+      12172,
+      12288,
+      12452,
+      12910,
+      13132,
+      13331,
+      13542,
+      13189,
+      13594,
+      13923,
+      14140,
+      13658,
+      13550,
+      13846,
+      13419,
+      13434,
+      13776,
+      13485,
+      13993,
+      14217,
+      14242,
+      14406,
+      14666,
+      14774,
+      15195,
+      15066,
+      15012,
+      15408,
+      15492,
+      15291,
+      15666,
+      16222,
+      16154,
+      15782,
+      15815,
+      15845,
+      15826,
+      16369,
+      16106,
+      16610,
+      16263
+    ],
+    "end_label": "$16,263",
+    "x_labels": [
+      "Jan-18",
+      "Jan-20",
+      "Jan-22",
+      "Jan-24",
+      "Jan-26"
+    ],
+    "y_ticks": [
+      5000,
+      10000,
+      15000,
+      20000
+    ]
+  },
+  "holdings": {
+    "asof": "05/31/2026",
+    "top_pct": 18.4,
+    "groups": [
+      {
+        "name": "Equity",
+        "rows": [
+          [
+            "Northern Bank Corp",
+            3.8
+          ],
+          [
+            "Lakeshore Financial",
+            3.1
+          ],
+          [
+            "Prairie Minerals Ltd",
+            2.5
+          ],
+          [
+            "Coastal Rail Inc",
+            2.1
+          ],
+          [
+            "Summit Software Inc",
+            1.9
+          ]
+        ]
+      },
+      {
+        "name": "Fixed Income",
+        "rows": [
+          [
+            "Government bond 2.75% 2034",
+            1.4
+          ],
+          [
+            "Provincial bond 3.10% 2033",
+            1.4
+          ],
+          [
+            "Corporate bond 4.20% 2030",
+            0.9
+          ],
+          [
+            "Government bond 1.50% 2031",
+            0.7
+          ],
+          [
+            "Corporate bond 5.00% 2029",
+            0.6
+          ]
+        ]
+      }
+    ],
+    "totals": [
+      [
+        "TOTAL NUMBER OF EQUITY HOLDINGS",
+        "72"
+      ],
+      [
+        "TOTAL NUMBER OF FIXED INCOME HOLDINGS",
+        "410"
+      ]
+    ]
+  },
+  "risk_measures": {
+    "asof": "06/30/2026",
+    "rows": [
+      [
+        "Annual Std Dev",
+        "6.40"
+      ],
+      [
+        "Beta",
+        "0.68"
+      ],
+      [
+        "B'mark Annual Std Dev.",
+        "7.68"
+      ],
+      [
+        "R-squared",
+        "0.69"
+      ],
+      [
+        "Alpha",
+        "-7.86"
+      ],
+      [
+        "Sharpe Ratio",
+        "0.13"
+      ]
+    ]
+  },
+  "key_data": {
+    "kv": [
+      [
+        "Total Fund Assets:",
+        "$1.2 billion"
+      ],
+      [
+        "NAVPS (06/30/2026):",
+        "C$11.48  US$8.08"
+      ],
+      [
+        "MER (as of Mar. 2026):",
+        "A: 2.10%  F: 0.85%"
+      ],
+      [
+        "Management Fee:",
+        "A: 1.75%  F: 0.65%"
+      ]
+    ],
+    "benchmark": "BLEND 40% Canadian equities index + 25% global equities index + 25% Canadian bond index + 10% high-yield bond index",
+    "distributions": [
+      [
+        "A",
+        "Annually",
+        "0.4219",
+        "12/23/2025"
+      ],
+      [
+        "F",
+        "Annually",
+        "0.5364",
+        "12/23/2025"
+      ],
+      [
+        "T5",
+        "Monthly",
+        "0.0300",
+        "6/19/2026"
+      ],
+      [
+        "PW",
+        "Annually",
+        "0.5287",
+        "12/23/2025"
+      ]
+    ],
+    "code_cols": [
+      "Series (C$)",
+      "Prefix",
+      "FE",
+      "BE*"
+    ],
+    "codes": [
+      [
+        "A",
+        "SMP",
+        "081",
+        "781"
+      ],
+      [
+        "F",
+        "SMP",
+        "643",
+        "—"
+      ],
+      [
+        "T5",
+        "SMP",
+        "121",
+        "177"
+      ],
+      [
+        "PW",
+        "SMP",
+        "091",
+        "—"
+      ]
+    ]
+  },
+  "why": [
+    "Seeks long-term growth of capital from a mix of Canadian and global companies and bonds.",
+    "Holds companies with durable advantages in their markets, alongside high-quality bonds.",
+    "A balanced mix that aims to smooth returns through market cycles."
+  ],
+  "risk_level": 1,
+  "disclaimers": [
+    "This is a fictional fund, used as an example of a fund fact sheet. Its figures are invented and describe no real investment.",
+    "** The blended index is composed of 60% Canadian equities and 40% Canadian bonds.",
+    "‡ The top holdings may change at any time; they are not a recommendation."
+  ]
+}

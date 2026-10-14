@@ -16,7 +16,7 @@ source.pdf ─► 1 INSPECT ─► 2 PALETTE ─► 3 AUTHOR (you) ─► 4 REND
 ```
 
 Scripts are in the plugin's `scripts/` folder (`${CLAUDE_PLUGIN_ROOT}/scripts/...`).
-A complete worked example (Mackenzie-style fund fact sheet, 12 components, 3 layouts, EN/FR)
+A complete worked example (a fictional fund's fact sheet, 12 components, 3 layouts, EN/FR)
 is in `${CLAUDE_PLUGIN_ROOT}/assets/example/` — it is the starting skeleton for a new report folder.
 
 Each report type has its own folder, `reports/<report-id>/`, in the project, for its template. What the report *is*

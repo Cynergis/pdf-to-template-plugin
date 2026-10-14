@@ -42,10 +42,10 @@ When the person wants to see a finished template before bringing a PDF:
 
 ```bash
 cp -R ${CLAUDE_PLUGIN_ROOT}/assets/example reports/fund-profile
-uv run ${CLAUDE_PLUGIN_ROOT}/scripts/render.py reports/fund-profile reports/fund-profile/data/bluewater_A_en.json --lang en --out reports/fund-profile/out/
+uv run ${CLAUDE_PLUGIN_ROOT}/scripts/render.py reports/fund-profile reports/fund-profile/data/sample_A_en.json --lang en --out reports/fund-profile/out/
 ```
 
-Then open `reports/fund-profile/out/bluewater_A_en.png` in the editor for them (VS Code shows PNGs
+Then open `reports/fund-profile/out/sample_A_en.png` in the editor for them (VS Code shows PNGs
 and PDFs in a tab) and say what the folder holds: templates, config, data, out. From here the
 `pdf-to-template` skill builds a template from their own PDF.
 
