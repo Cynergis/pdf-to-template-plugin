@@ -26,6 +26,14 @@ skill reads that definition, builds the template in the folder, and records what
 graph. The project is an OTO project (`oto status --project <root>`); define the report first, so the template has
 fields to be checked against.
 
+## Talking with the person
+
+- **Plain, natural language, in the person's words.** Never say question numbers, ids, class or
+  field names, file names or commands, and never paste what a command printed.
+- **Technical details only when the person asks for them.** Never offer them, not even as a choice.
+- **The same clear shape every time:** say what we are about to do, ask a few questions at a time,
+  read back what you understood in plain sentences, confirm, then say what is next.
+
 ## 0. Read the definition
 
 The report id is the `reportId` the definition was recorded under (`kg_ask Q1` lists them). Ask the graph; do not
@@ -177,7 +185,8 @@ validation gets a new `saved`.
 `oto curate check --project <root>` must find nothing blocking. `oto query --project <root> questions` (or
 `kg_questions`) lists what the graph cannot answer yet about the report: fields with no column (`Q4`), a meaning
 missing in a language (`Q3`), what the release still needs (`Q13`). They are what stands between the template and a
-production release; say them, with who can answer each. When the template changes a section or a field, change
+production release; say them in plain words (what is missing, never a question's number), with who can
+answer each. When the template changes a section or a field, change
 the definition first (report:new-report), then the template.
 
 Structured fields (lists, series, values with named parts) arrive from the report's table as JSON text in one column;
