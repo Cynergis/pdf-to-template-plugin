@@ -71,7 +71,7 @@ proves the setup and shows what a finished template looks like.
 /pdf-to-template:setup copy the example report into reports/fund-profile, render it with its English data and open the result
 ```
 
-Claude copies the example, renders it and opens `reports/fund-profile/out/bluewater_A_en.png` in
+Claude copies the example, renders it and opens `reports/fund-profile/out/sample_A_en.png` in
 an editor tab. What you see: a one page fact sheet with a returns table, bar and line charts drawn
 from the data, allocation tables, holdings and a footer. The charts are not pictures: the plugin's
 filters draw them from the numbers. The PDF is next to the PNG; click it in the Explorer to open it.
@@ -79,7 +79,7 @@ filters draw them from the numbers. The PDF is next to the PNG; click it in the 
 Now transform it. Change a fact and render again:
 
 ```text
-in reports/fund-profile/data/bluewater_A_en.json set the 1 Year return to 7.2 and the total fund assets to $3.4 billion, re-render and open the result
+in reports/fund-profile/data/sample_A_en.json set the 1 Year return to 7.2 and the total fund assets to $3.4 billion, re-render and open the result
 ```
 
 Then the same template in another language, with the other data file:
