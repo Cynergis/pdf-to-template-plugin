@@ -28,14 +28,16 @@ compares it with the source and fixes the worst cells until the gate passes.
 the starter folder that ships with the plugin: copy `starter/` from
 https://github.com/Cynergis/pdf-to-template-plugin to a folder of your own (or use the Command
 Palette, **Git: Clone**, and open its `starter` folder). It holds a `reports/` folder, a
-`CLAUDE.md` that tells Claude how to work here, and a project setting that registers the
-`cynergis` marketplace when you accept the workspace trust dialog. An empty folder works too; the
-marketplace is then added in the next step.
+`CLAUDE.md` that tells Claude how to work here, and a project setting that registers the two
+marketplaces, `cynergis-engine` (the OTO engine) and `cynergis` (the packs and this plugin), when you
+accept the workspace trust dialog. An empty folder works too; the marketplaces are then added in the
+next step.
 
 **The plugin.** Open the Claude Code panel and type `/plugins` in the prompt box. In the
-**Marketplaces** tab add `Cynergis/oto-registry` if it is not listed. In the **Plugins** tab
-search for `pdf-to-template` and click **Install**, then choose **Install for you**. Or open this
-link, which does the same in one step:
+**Marketplaces** tab add `Cynergis/oto` and `Cynergis/oto-registry` if they are not listed. In the
+**Plugins** tab install `oto` (the engine, from the first) and then search for `pdf-to-template` and
+click **Install**, choosing **Install for you**. Or open this link, which installs the plugin once the
+engine is there:
 
 ```text
 vscode://anthropic.claude-code/install-plugin?plugin=pdf-to-template&marketplace=Cynergis/oto-registry
