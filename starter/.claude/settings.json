@@ -1,11 +1,22 @@
 {
   "extraKnownMarketplaces": {
+    "cynergis-engine": {
+      "source": {
+        "source": "github",
+        "repo": "Cynergis/oto"
+      },
+      "autoUpdate": true
+    },
     "cynergis": {
-      "source": { "source": "github", "repo": "Cynergis/oto-registry" },
+      "source": {
+        "source": "github",
+        "repo": "Cynergis/oto-registry"
+      },
       "autoUpdate": true
     }
   },
   "enabledPlugins": {
+    "oto@cynergis-engine": true,
     "pdf-to-template@cynergis": true
   }
 }

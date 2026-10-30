@@ -20,15 +20,19 @@ records the sample PDF, the build and the release back through OTO's gates. Unti
 
 ## Install
 
-In the Claude Code panel in VS Code, type `/plugins`, add the marketplace `Cynergis/oto-registry` in the
-**Marketplaces** tab and install `pdf-to-template` from the **Plugins** tab; or open this link:
+In the Claude Code panel in VS Code, type `/plugins`. In the **Marketplaces** tab add `Cynergis/oto` (the
+OTO engine's own marketplace) and `Cynergis/oto-registry` (the packs and this plugin); in the **Plugins**
+tab install `oto` from the first and `pdf-to-template` from the second. Or open this link for the plugin,
+once the engine is installed:
 
 ```text
 vscode://anthropic.claude-code/install-plugin?plugin=pdf-to-template&marketplace=Cynergis/oto-registry
 ```
 
-Then `/pdf-to-template:setup`. From a terminal, the same is `claude plugin install pdf-to-template
---marketplace Cynergis/oto-registry`, or `claude --plugin-dir /path/to/pdf-to-template-plugin` for a checkout.
+Then `/pdf-to-template:setup`. From a terminal, the same is `claude plugin marketplace add Cynergis/oto`,
+`claude plugin install oto@cynergis-engine`, `claude plugin marketplace add Cynergis/oto-registry` and
+`claude plugin install pdf-to-template@cynergis`, or `claude --plugin-dir /path/to/pdf-to-template-plugin`
+for a checkout. The registry carries extensions and packs of the engine, never the engine (OTO's ADR-0009).
 
 ## What you need
 
